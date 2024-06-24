@@ -1,0 +1,145 @@
+let a;
+let time;
+let date;
+const option = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+setInterval(()=> {
+a = new Date();
+date = a.toLocaleDateString(undefined,option);
+time = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
+document.getElementById('time').innerHTML = time +  "<br> on " + date;
+}, 1000);
+
+function searchCountry() {
+    const searchValue = document.getElementById("searchBox").value;
+  
+    // Define a dictionary of country names and their respective time zones
+    const countryTimezones = {
+        "United States": "America/New_York",
+        "United Kingdom": "Europe/London",
+        "Canada": "America/Toronto",
+        "India": "Asia/Kolkata",
+        "Australia": "Australia/Sydney",
+        "Germany": "Europe/Berlin",
+        "France": "Europe/Paris",
+        "China": "Asia/Shanghai",
+        "Japan": "Asia/Tokyo",
+        "Mexico": "America/Mexico_City",
+        "Brazil": "America/Sao_Paulo",
+        "Russia": "Europe/Moscow",
+        "Spain": "Europe/Madrid",
+        "Italy": "Europe/Rome",
+        "South Korea": "Asia/Seoul",
+        "Indonesia": "Asia/Jakarta",
+        "Turkey": "Europe/Istanbul",
+        "Netherlands": "Europe/Amsterdam",
+        "Switzerland": "Europe/Zurich",
+        "Saudi Arabia": "Asia/Riyadh",
+        "Argentina": "America/Argentina/Buenos_Aires",
+        "South Africa": "Africa/Johannesburg",
+        "Sweden": "Europe/Stockholm",
+        "Belgium": "Europe/Brussels",
+        "Norway": "Europe/Oslo",
+        "Austria": "Europe/Vienna",
+        "Poland": "Europe/Warsaw",
+        "Ukraine": "Europe/Kiev",
+        "Greece": "Europe/Athens",
+        "Portugal": "Europe/Lisbon",
+        "Thailand": "Asia/Bangkok",
+        "Israel": "Asia/Jerusalem",
+        "Singapore": "Asia/Singapore",
+        "Egypt": "Africa/Cairo",
+        "Ireland": "Europe/Dublin",
+        "Malaysia": "Asia/Kuala_Lumpur",
+        "Denmark": "Europe/Copenhagen",
+        "Hong Kong": "Asia/Hong_Kong",
+        "Finland": "Europe/Helsinki",
+        "New Zealand": "Pacific/Auckland",
+        "Czech Republic": "Europe/Prague",
+        "Romania": "Europe/Bucharest",
+        "Philippines": "Asia/Manila",
+        "Colombia": "America/Bogota",
+        "Chile": "America/Santiago",
+        "Vietnam": "Asia/Ho_Chi_Minh",
+        "Belarus": "Europe/Minsk",
+        "Hungary": "Europe/Budapest",
+        "United Arab Emirates": "Asia/Dubai",
+        "Serbia": "Europe/Belgrade",
+        "Slovakia": "Europe/Bratislava",
+        "Croatia": "Europe/Zagreb",
+        "Bulgaria": "Europe/Sofia",
+        "Lithuania": "Europe/Vilnius",
+        "Slovenia": "Europe/Ljubljana",
+        "Estonia": "Europe/Tallinn",
+        "Latvia": "Europe/Riga",
+        "Iceland": "Atlantic/Reykjavik",
+        "Pakistan": "Asia/Karachi",
+        "Iran": "Asia/Tehran",
+        "Kazakhstan": "Asia/Almaty",
+        "Morocco": "Africa/Casablanca",
+        "Iraq": "Asia/Baghdad",
+        "Oman": "Asia/Muscat",
+        "Tunisia": "Africa/Tunis",
+        "Kenya": "Africa/Nairobi",
+        "Venezuela": "America/Caracas",
+        "Nigeria": "Africa/Lagos",
+        "Qatar": "Asia/Qatar",
+        "Uzbekistan": "Asia/Tashkent",
+        "Ethiopia": "Africa/Addis_Ababa",
+        "Mozambique": "Africa/Maputo",
+        "Ghana": "Africa/Accra",
+        "Angola": "Africa/Luanda",
+        "Afghanistan": "Asia/Kabul",
+        "Jordan": "Asia/Amman",
+        "Lebanon": "Asia/Beirut",
+        "Yemen": "Asia/Aden",
+        "Cameroon": "Africa/Douala",
+        "Guatemala": "America/Guatemala",
+        "Ecuador": "America/Guayaquil",
+        "Honduras": "America/Tegucigalpa",
+        "Cuba": "America/Havana",
+        "Zimbabwe": "Africa/Harare",
+        "Uganda": "Africa/Kampala",
+        "Sri Lanka": "Asia/Colombo",
+        "Gambia": "Africa/Banjul",
+        "Kyrgyzstan": "Asia/Bishkek",
+        "Myanmar": "Asia/Yangon",
+        "Botswana": "Africa/Gaborone",
+        "Zambia": "Africa/Lusaka",
+        "Mauritius": "Indian/Mauritius",
+        "Albania": "Europe/Tirane",
+        "Nepal": "Asia/Kathmandu",
+        "Cyprus": "Asia/Nicosia",
+        "Tanzania": "Africa/Dar_es_Salaam",
+        "Maldives": "Indian/Maldives",
+        "Montenegro": "Europe/Podgorica",
+        "Namibia": "Africa/Windhoek",
+        "Bahamas": "America/Nassau",
+        "Brunei": "Asia/Brunei",
+        "Fiji": "Pacific/Fiji",
+        "Barbados": "America/Barbados",
+        "Malawi": "Africa/Blantyre",
+        "Guyana": "America/Guyana",
+        "Suriname": "America/Paramaribo",
+        "Armenia": "Asia/Yerevan",
+        "Bolivia": "America/La_Paz",
+        "Mongolia": "Asia/Ulaanbaatar",
+        "Trinidad and Tobago": "America/Port_of_Spain",
+        "Jamaica": "America/Jamaica",
+        "Haiti": "America/Port-au-Prince",
+        "Grenada": "America/Grenada",
+        "Dominica": "America/Dominica",
+        "Malta": "Europe/Malta",
+        "Bahrain": "Asia/Bahrain",
+        "Luxembourg": "Europe/Luxembourg",
+      // Add more countries and their time zones as needed
+    };
+  
+    const timezone = countryTimezones[searchValue];
+    if (timezone) {
+      const currentTime = new Date().toLocaleString("en-US", { timeZone: timezone });
+      document.getElementById("result").textContent = `Current time in ${searchValue}: ${currentTime}`;
+    } else {
+      document.getElementById("result").textContent = "Time zone not found for the provided country.";
+    }
+    
+  }

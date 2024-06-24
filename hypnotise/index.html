@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Hypnotizing Page</title>
+  <style>
+    body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111;
+}
+
+.hypnotize {
+  width: 1000px;
+  height: 1000px;
+  /* border-radius: 50%; */
+  background: linear-gradient(135deg, #ff0000, #0000ff);
+  animation: hypnotizeAnimation 5s infinite linear;
+}
+
+@keyframes hypnotizeAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="hypnotize">
+  </div>
+</body>
+</html>

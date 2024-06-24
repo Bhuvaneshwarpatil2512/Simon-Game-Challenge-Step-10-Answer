@@ -1,0 +1,168 @@
+body {
+body {
+  font-family: 'Montserrat';
+}
+
+#title {
+
+}
+.Title-heading{
+  font-style: 3.5rem;
+  line-height: 1.5;
+}
+.container-fluidS {
+  padding: 3% 15%;
+}
+
+h1, h2, h3, h4{
+  font-family: 'Montserrat-Black';
+}
+p {
+  color: #8f8f8f;
+}
+
+/* section */
+.color{
+  background-color: #ff4c68;
+  color: white;
+}
+.white{
+  background-color: #fff;
+}
+/* navigation bar*/
+.navbar {
+  padding-bottom: 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubenty";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  font-family: "Montserrat-light";
+}
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+#features {
+  padding: 7% 15%;
+
+  position: relative;
+
+}
+.img1 {
+  width: 18%;
+  transform: rotate(25deg);
+  position: absolute;
+}
+
+/* feature*/
+.features-title{
+  font-size: 2.5rem;
+}
+
+.features-box {
+  text-align: center;
+  padding: 5%;
+}
+
+.fas {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.fas:hover {
+  color: #ff4c68;
+}
+
+/*testimonials*/
+#testimonials {
+  text-align: center;
+  background-color: #ef8172;
+  color: white;
+}
+.testimonials-heading{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+.testimg {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.carousel-item {
+  padding: 7% 15%;
+}
+
+/* press section*/
+#press {
+  background-color: #ef8172;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/*pricing*/
+#pricing {
+  background-color: #fff;
+  padding: 100px;
+  text-align: center;
+
+}
+.Pricing-heading{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+.pricing-coloum {
+  padding: 3% 2%;
+}
+
+/*Call to Action*/
+#cta{
+  background-color: #ff4c68;
+  color: #fff;
+  padding: 7% 15%;
+  text-align: center;
+}
+.heading-cta{
+  font-family: "Montserrat-Black";
+  font-size: 3.5rem;
+  height: 1.5;
+}
+
+/*footer*/
+#footer{
+  text-align: center;
+  padding: 7% 15%;
+}
+.socal-icon {
+  margin: 1%;
+}
+.socal-icon:hover{
+  color:#ff4c68;
+}
+@media (max-width: 1028px) {
+  #title{
+    text-align: center;
+  }
+  .img1{
+    position: static;
+    transform: rotate(0);
+  }
+}
+.HO:hover{
+  color:#ff4c68;
+}
